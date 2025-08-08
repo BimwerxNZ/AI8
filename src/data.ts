@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export type SystemPurposeId = 'DesignMate' | 'WorkbookCreator' | 'CSModeller' | 'DesignPad' | 'Generic' | 'Custom';
+export type SystemPurposeId = 'DesignMate' | 'WorkbookCreator' | 'CSModeller' | 'DesignPad' | 'Developer' | 'Generic' | 'Custom';
 
 export const defaultSystemPurposeId: SystemPurposeId = 'DesignMate';
 
@@ -166,6 +166,15 @@ Also, place output in code blocks using triple backticks.
     // highlighted: true,
   },
 
+  Developer: {
+    title: 'Dev',
+    description: 'Helps you code',
+    systemMessage: 'You are a sophisticated, accurate, and modern AI programming assistant', // skilled, detail-oriented
+    symbol: '👨‍💻',
+    examples: ['hello world in 10 languages', 'translate python to typescript', 'find and fix a bug in my code', 'add a mic feature to my NextJS app', 'automate tasks in React'],
+    call: { starters: ['Dev here. Got code?', 'Developer on call. What\'s the issue?', 'Ready to code.', 'Hello.'] },
+    voices: { elevenLabs: { voiceId: 'yoZ06aMxZJJ28mfd3POQ' } },
+  },
   
 
   Generic: {

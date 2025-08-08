@@ -18,7 +18,7 @@ export const usePurposeStore = create<PurposeStore>()(
     (set) => ({
 
       // default state
-      hiddenPurposeIDs: ['DesignMate', 'WorkbookCreator'],
+      hiddenPurposeIDs: ['Developer', 'Developer'],
 
       toggleHiddenPurposeId: (purposeId: string) => {
         set(state => {
@@ -44,8 +44,8 @@ export const usePurposeStore = create<PurposeStore>()(
       migrate: (state: any, fromVersion: number): PurposeStore => {
         // 0 -> 1: rename 'enterToSend' to 'enterIsNewline' (flip the meaning)
         if (state && fromVersion === 0)
-          if (!state.hiddenPurposeIDs.includes('DesignMate'))
-            state.hiddenPurposeIDs.push('DesignMate');
+          if (!state.hiddenPurposeIDs.includes('Developer'))
+            state.hiddenPurposeIDs.push('Developer');
         // 1 -> 2: add a hidden 'YouTubeTranscriber' purpose
         //if (state && fromVersion === 1)
           //if (!state.hiddenPurposeIDs.includes('YouTubeTranscriber'))
