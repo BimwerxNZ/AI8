@@ -149,10 +149,10 @@ export function PersonaSelector(props: {
   const chatLLM = { id: chatLLMId ?? undefined }; // adapter for porting
 
 
-  // derived state
+  // derived state 
 
   const isCustomPurpose = systemPurposeId === 'Custom';
-  const isYouTubeTranscriber = systemPurposeId === 'YouTubeTranscriber';
+  //const isYouTubeTranscriber = systemPurposeId === 'YouTubeTranscriber';
 
   const { selectedPurpose, fourExamples } = React.useMemo(() => {
     const selectedPurpose: SystemPurposeData | null = systemPurposeId ? (SystemPurposes[systemPurposeId] ?? null) : null;
@@ -447,17 +447,7 @@ export function PersonaSelector(props: {
             }}
           />
         )}
-
-        {/* [row -1] YouTube URL */}
-        {isYouTubeTranscriber && (
-          <YouTubeURLInput
-            onSubmit={handleAppendTranscriptAsMessage}
-            sx={{
-              gridColumn: '1 / -1',
-            }}
-          />
-        )}
-
+        
       </Box>
 
     </Box>
