@@ -1,2 +1,3 @@
 # AI8
 Big-AGI Version 2.0, adapted from https://github.com/enricoros/big-AGI/tree/big-agi-2
+More info to follow soon...
